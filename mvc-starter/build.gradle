@@ -1,0 +1,6 @@
+dependencies {
+    compileOnly "org.springframework.boot:spring-boot-starter-undertow:1.5.2.RELEASE"
+
+    // https://mvnrepository.com/artifact/org.springframework.retry/spring-retry
+    compile group: 'org.springframework.retry', name: 'spring-retry', version: '1.2.0.RELEASE'
+}

@@ -1,0 +1,7 @@
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-amqp:1.5.2.RELEASE"
+    compile "org.springframework.amqp:spring-amqp:1.7.1.RELEASE"
+
+    // https://mvnrepository.com/artifact/org.springframework.retry/spring-retry
+    compile group: 'org.springframework.retry', name: 'spring-retry', version: '1.2.0.RELEASE'
+}

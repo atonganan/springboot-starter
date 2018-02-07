@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':mvc-starter')
+    compile "io.netty:netty-all:4.1.6.Final"
+    compile group: 'org.jboss.resteasy', name: 'jaxrs-api', version: '3.0.12.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-client', version: '3.1.4.Final'
+    testCompile 'org.springframework.boot:spring-boot-starter-undertow:1.5.2.RELEASE'
+}

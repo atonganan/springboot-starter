@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: INFO
+    com.shenit.springboot.jg: TRACE
+
+jg:
+  appkey: 5aa0f6938f04fecdd64f0e82
+  secret: 4fbae394c896863f78a37ce0
+  push.enabled: true
+  sms.enabled: true

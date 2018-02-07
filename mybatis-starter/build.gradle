@@ -1,0 +1,14 @@
+dependencies {
+    /** Database support */
+    // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+    compile(group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.0'){
+        exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
+    }
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.41'
+    // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
+    compile project(':bean-support')
+
+    testCompile("org.mybatis.spring.boot:mybatis-spring-boot-starter-test:1.3.0")
+}

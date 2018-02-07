@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':mvc-starter')
+    compileOnly project(':redis-starter')
+}

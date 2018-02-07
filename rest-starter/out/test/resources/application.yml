@@ -1,0 +1,12 @@
+logging:
+  level:
+    root: DEBUG
+
+server.port: 8080
+
+rest:
+  service:
+    connTimeout: 3000
+    readTimeout: 10000
+    retries: 5
+    delay: 10000

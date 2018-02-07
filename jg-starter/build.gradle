@@ -1,0 +1,5 @@
+dependencies {
+    compile group: 'cn.jpush.api', name: 'jpush-client', version: '3.3.0'
+    compile group: 'cn.jpush.api', name: 'jsms-client', version: '1.2.3'
+
+}

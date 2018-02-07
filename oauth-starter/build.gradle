@@ -1,0 +1,6 @@
+dependencies {
+    compile project(":rest-starter")
+    compile project(":redis-starter")
+    compileOnly project(":tencent-starter")
+    testCompile project(":tencent-starter")
+}
