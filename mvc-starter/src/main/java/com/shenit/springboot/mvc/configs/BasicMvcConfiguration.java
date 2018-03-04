@@ -4,7 +4,7 @@ import com.shenit.commons.exp.BusinessException;
 import com.shenit.commons.utils.GsonUtils;
 import com.shenit.commons.utils.ShenHttps;
 import com.shenit.commons.utils.ShenStrings;
-import com.shenit.springboot.mvc.converters.GosuGsonHttpConverter;
+import com.shenit.springboot.mvc.converters.ShenGsonHttpConverter;
 import com.shenit.springboot.mvc.converters.StringToCollectionConverter;
 import com.shenit.springboot.mvc.converters.TextHttpConverter;
 import org.apache.commons.lang3.StringUtils;
@@ -104,7 +104,7 @@ public abstract class BasicMvcConfiguration extends WebMvcConfigurerAdapter impl
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(new GosuGsonHttpConverter());
+        converters.add(new ShenGsonHttpConverter());
         converters.add(new TextHttpConverter());
     }
 

@@ -22,10 +22,10 @@ import java.nio.charset.Charset;
 /**
  * 项目专用GSON消息处理器.
  */
-public class GosuGsonHttpConverter extends GsonHttpMessageConverter {
-    private static final Logger LOG = LoggerFactory.getLogger(GosuGsonHttpConverter.class);
+public class ShenGsonHttpConverter extends GsonHttpMessageConverter {
+    private static final Logger LOG = LoggerFactory.getLogger(ShenGsonHttpConverter.class);
 
-    public GosuGsonHttpConverter() {
+    public ShenGsonHttpConverter() {
         super();
         setGson(GsonUtils.inst());
     }

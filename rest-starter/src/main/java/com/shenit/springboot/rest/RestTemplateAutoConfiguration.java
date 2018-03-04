@@ -1,7 +1,7 @@
 package com.shenit.springboot.rest;
 
 import com.shenit.commons.utils.ShenStrings;
-import com.shenit.springboot.mvc.converters.GosuGsonHttpConverter;
+import com.shenit.springboot.mvc.converters.ShenGsonHttpConverter;
 import io.netty.channel.nio.NioEventLoopGroup;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -58,7 +58,7 @@ public class RestTemplateAutoConfiguration {
         reqFactory.afterPropertiesSet();    //设置默认的SSL上下文
         //connection timeout for 10s
         return builder.setConnectTimeout(properties.connTimeout)
-                .messageConverters(new GosuGsonHttpConverter(),new StringHttpMessageConverter(StandardCharsets.UTF_8))
+                .messageConverters(new ShenGsonHttpConverter(),new StringHttpMessageConverter(StandardCharsets.UTF_8))
                 //read timeout for 30s
                 .setReadTimeout(properties.readTimeout)
                 .requestFactory(reqFactory)
