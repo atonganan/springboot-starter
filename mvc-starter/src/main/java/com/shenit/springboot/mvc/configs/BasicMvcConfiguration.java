@@ -1,6 +1,7 @@
 package com.shenit.springboot.mvc.configs;
 
 import com.shenit.commons.exp.BusinessException;
+import com.shenit.commons.pojo.Response;
 import com.shenit.commons.utils.GsonUtils;
 import com.shenit.commons.utils.ShenHttps;
 import com.shenit.commons.utils.ShenStrings;
@@ -67,11 +68,11 @@ public abstract class BasicMvcConfiguration extends WebMvcConfigurerAdapter impl
                     msg = msg.startsWith(ShenStrings.DOUBLE_QUOTE) ? msg.substring(1,msg.length() - 1) : msg;   //移除双引号
                 } else if(ex instanceof IllegalStateException) {
                     msg = ex.getMessage();
-                }
-
-                if(ex instanceof BusinessException){
+                } else if (ex instanceof BusinessException) {
                     BusinessException bex = (BusinessException) ex;
                     msg = GsonUtils.format(bex.resp);
+                } else {
+                    msg = ex.getMessage();
                 }
 
                 if (LOG.isInfoEnabled()) {
@@ -87,7 +88,7 @@ public abstract class BasicMvcConfiguration extends WebMvcConfigurerAdapter impl
                 response.setStatus(status);
                 try {
                     response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
-                    response.getOutputStream().write((msg == null ? StringUtils.EMPTY : StringUtils.wrap(msg,'"')).getBytes(StandardCharsets.UTF_8));
+                    response.getOutputStream().write(GsonUtils.format(Response.simple(status, msg)).getBytes(StandardCharsets.UTF_8));
                     response.getOutputStream().flush();
                 } catch (IOException e) {
                     //ignore
