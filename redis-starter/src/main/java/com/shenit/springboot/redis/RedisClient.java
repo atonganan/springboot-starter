@@ -325,6 +325,10 @@ public class RedisClient {
         return redis.opsForZSet().reverseRange(schemadPath(key),start,end);
     }
 
+    public Set<ZSetOperations.TypedTuple<Object>> zrevrangeWithScore(String key, int start, int end) {
+        return redis.opsForZSet().reverseRangeWithScores(key, start, end);
+    }
+
     public void pipeline(RedisCallback<?> callback) {
         redis.executePipelined(callback);
     }
@@ -526,6 +530,20 @@ public class RedisClient {
         }
         return exists;
     }
+
+    /**
+     * 针对Hash的设置操作.
+     *
+     * @param path
+     * @param key
+     * @param val
+     * @return
+     */
+    public void hset(String path, String key, Object val) {
+        path = schemadPath(path);
+        redis.opsForHash().put(path, key, val);
+    }
+
 
     /**
      * Hash删除
