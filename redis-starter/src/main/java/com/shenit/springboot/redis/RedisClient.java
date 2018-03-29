@@ -317,16 +317,20 @@ public class RedisClient {
 
     /**
      * 按照分数由小到大获取顺序序列元素
-     * @param key
+     * @param path
      * @param start
      * @param end
      */
-    public Set<Object> zrevrange(String key, int start, int end) {
-        return redis.opsForZSet().reverseRange(schemadPath(key),start,end);
+    public Set<Object> zrevrange(String path, int start, int end) {
+        return redis.opsForZSet().reverseRange(schemadPath(path), start, end);
     }
 
-    public Set<ZSetOperations.TypedTuple<Object>> zrevrangeWithScore(String key, int start, int end) {
-        return redis.opsForZSet().reverseRangeWithScores(key, start, end);
+    public Set<ZSetOperations.TypedTuple<Object>> zrevrangeWithScore(String path, int start, int end) {
+        return redis.opsForZSet().reverseRangeWithScores(schemadPath(path), start, end);
+    }
+
+    public Long zrevrank(String path, Object value) {
+        return redis.opsForZSet().reverseRank(schemadPath(path), value);
     }
 
     public void pipeline(RedisCallback<?> callback) {
@@ -597,4 +601,29 @@ public class RedisClient {
         return GsonUtils.parse(val,clazz);
     }
 
+    /**
+     * 针对Hash的获取和设置操作. 首先尝试获取值，如果不存在则设置提供的值
+     *
+     * @param path
+     * @param key
+     * @param val
+     * @return
+     */
+    public <T> T hGetSetIfAbsent(String path, String key, T val) {
+        path = schemadPath(path);
+        String exists = ShenStrings.str(redis.opsForHash().get(path, key));
+        if (StringUtils.isEmpty(exists)) {
+            System.out.println("hGetSetIfAbsent [" + exists + "]");
+            redis.opsForHash().put(path, key, val);
+            return val;
+        }
+        return (T) GsonUtils.parse(exists, val.getClass());
+    }
+
+    /**
+     * 获取有序集合的成员数
+     */
+    public Long zcard(String path) {
+        return redis.opsForZSet().zCard(schemadPath(path));
+    }
 }
