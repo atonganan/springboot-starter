@@ -25,11 +25,17 @@ import java.util.function.Supplier;
  * Created by jiangnan on 27/07/2017.
  */
 public class RedisClient {
+
+    private static final String ABSOLUTE_PATH = "path";
+    private static final String PUBLIC_SCHEMA = "public";
+
     private final String schema;
+    private final String publicSchema;
     private RedisTemplate<String,Object> redis;
 
     public RedisClient( String namespace, String schema,RedisTemplate<String, Object> redis) {
         this.schema = ShenStrings.joinWith(namespace,schema, ShenStrings.COLON);
+        this.publicSchema = ShenStrings.joinWith(ABSOLUTE_PATH, namespace, PUBLIC_SCHEMA, ShenStrings.COLON);
         this.redis = redis;
     }
 
@@ -492,6 +498,28 @@ public class RedisClient {
     private String schemadPath(String key) {
         return key.startsWith("path:") ? key.substring(5) : (StringUtils.isEmpty(schema) ? key : ShenStrings.joinWith(schema ,key, ShenStrings.COLON));
     }
+
+    /**
+     * 把路径前面带上publicSchema前缀
+     *
+     * @param key
+     * @return
+     */
+    public String publicPath(String key) {
+        return StringUtils.isEmpty(schema) ? key : ShenStrings.joinWith(publicSchema, key, ShenStrings.COLON);
+    }
+
+    /**
+     * 将路径标志为绝对路径，不加schema
+     *
+     * @param key
+     * @return
+     */
+    public static String absolutePath(String key) {
+        return ShenStrings.joinWith(ABSOLUTE_PATH, key, ShenStrings.COLON);
+    }
+
+
 
     /**
      * 获取一个范围的列表值.
