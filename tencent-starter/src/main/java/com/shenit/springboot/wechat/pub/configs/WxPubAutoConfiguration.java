@@ -76,7 +76,7 @@ public class WxPubAutoConfiguration {
                                 redis.set(path, GsonUtils.format(wrapper), wrapper.expires);
                             }
                         }catch(Exception ex){
-                            if (LOG.isDebugEnabled()) LOG.debug("[load([appid])] No js wrapper to appid -> {}",appid );
+                            LOG.error("[load([appid])] No js wrapper to appid -> " + appid, ex);
                             wrapper = JsApiTicketWrapper.EMPTY;
                         }
                         return wrapper.ticket;
