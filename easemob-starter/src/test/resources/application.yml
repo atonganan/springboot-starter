@@ -1,7 +1,7 @@
 logging:
   level:
     root: INFO
-    com.shenit.piggymate.easemob: TRACE
+    net.gradle.piggymate.easemob: TRACE
 
 easemob:
   enabled: true

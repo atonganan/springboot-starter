@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter.iml" group="amqp-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter_main.iml" group="amqp-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/amqp-starter/amqp-starter_test.iml" group="amqp-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bean-support/bean-support.iml" filepath="$PROJECT_DIR$/.idea/modules/bean-support/bean-support.iml" group="bean-support" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bean-support/bean-support_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bean-support/bean-support_main.iml" group="bean-support" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bean-support/bean-support_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bean-support/bean-support_test.iml" group="bean-support" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-utils/common-utils_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common-utils/common-utils_main.iml" group="common-utils" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-utils/common-utils_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common-utils/common-utils_test.iml" group="common-utils" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-utils/common-utils~1.iml" filepath="$PROJECT_DIR$/.idea/modules/common-utils/common-utils~1.iml" group="common-utils" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons.iml" filepath="$PROJECT_DIR$/.idea/modules/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons_main.iml" filepath="$PROJECT_DIR$/.idea/modules/commons_main.iml" group="commons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons_test.iml" filepath="$PROJECT_DIR$/.idea/modules/commons_test.iml" group="commons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter.iml" group="easemob-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter_main.iml" group="easemob-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/easemob-starter/easemob-starter_test.iml" group="easemob-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter.iml" group="jg-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter_main.iml" group="jg-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jg-starter/jg-starter_test.iml" group="jg-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvc-starter/mvc-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/mvc-starter/mvc-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter.iml" group="mybatis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter_main.iml" group="mybatis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-starter/mybatis-starter_test.iml" group="mybatis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth-starter/oauth-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth-starter/oauth-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter.iml" group="redis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter_main.iml" group="redis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/redis-starter/redis-starter_test.iml" group="redis-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter.iml" group="rest-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter_main.iml" group="rest-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rest-starter/rest-starter_test.iml" group="rest-starter" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-starter.iml" filepath="$PROJECT_DIR$/springboot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tencent-starter/tencent-starter.iml" filepath="$PROJECT_DIR$/.idea/modules/tencent-starter/tencent-starter.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,1 +1,0 @@
-package com.shenit.springboot.amqp.rabbit;

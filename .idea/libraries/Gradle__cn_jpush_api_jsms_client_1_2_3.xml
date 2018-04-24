@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.jpush.api:jsms-client:1.2.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jpush.api/jsms-client/1.2.3/e3178be7da8cd298e737f71fb60f1fec9bfa1ad8/jsms-client-1.2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jpush.api/jsms-client/1.2.3/d8ae9bfc6b5aadcb420fd232061f510e65d1d99d/jsms-client-1.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

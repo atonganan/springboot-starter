@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../common-utils" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-4.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../common-utils" />
+            <option value="$PROJECT_DIR$/../common-utils/common-utils" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="IDE">
+            <builds>
+              <build path="$PROJECT_DIR$/../common-utils" name="common-utils" />
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-4.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/amqp-starter" />
+            <option value="$PROJECT_DIR$/bean-support" />
+            <option value="$PROJECT_DIR$/easemob-starter" />
+            <option value="$PROJECT_DIR$/jg-starter" />
+            <option value="$PROJECT_DIR$/mvc-starter" />
+            <option value="$PROJECT_DIR$/mybatis-starter" />
+            <option value="$PROJECT_DIR$/oauth-starter" />
+            <option value="$PROJECT_DIR$/redis-starter" />
+            <option value="$PROJECT_DIR$/rest-starter" />
+            <option value="$PROJECT_DIR$/tencent-starter" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,5 +1,5 @@
 allprojects {
-    group 'com.shenit.springboot'
+    group 'net.gradle.springboot'
     version '1.0.1-SNAPSHOT'
 }
 
@@ -34,7 +34,7 @@ subprojects{
             exclude module: "spring-boot-starter-tomcat"
             exclude module: "jackson-databind"
         }
-        compile group: "com.shenit.commons", name: 'common-utils', version: '1.0.0-SNAPSHOT'
+        compile group: "net.gradle.commons", name: 'common-utils', version: '1.0.0-SNAPSHOT'
         // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
         compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
         // https://mvnrepository.com/artifact/ch.qos.logback/logback-core

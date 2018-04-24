@@ -1,7 +1,7 @@
 logging:
   level:
     root: INFO
-    com.shenit.springboot.jg: TRACE
+    net.gradle.springboot.jg: TRACE
 
 jg:
   appkey: 5aa0f6938f04fecdd64f0e82
