@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.shenit.springboot.easemob.EasemobClientIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-04-24T10:19:48" hostname="Justices-MacBook-Pro-3.local" time="0.002">
+<testsuite name="com.shenit.springboot.easemob.EasemobClientIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-04-24T10:41:56" hostname="Justices-MacBook-Pro-3.local" time="0.001">
   <properties/>
-  <testcase name="initializationError" classname="com.shenit.springboot.easemob.EasemobClientIntegrationTest" time="0.002">
+  <testcase name="initializationError" classname="com.shenit.springboot.easemob.EasemobClientIntegrationTest" time="0.001">
     <failure message="java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
 	at java.lang.ClassLoader.defineClass1(Native Method)
 	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)

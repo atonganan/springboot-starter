@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.shenit.springboot.easemob.EasemobClientTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-04-24T10:19:48" hostname="Justices-MacBook-Pro-3.local" time="0.0">
+<testsuite name="com.shenit.springboot.easemob.EasemobClientTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-04-24T10:41:56" hostname="Justices-MacBook-Pro-3.local" time="0.0">
   <properties/>
   <testcase name="initializationError" classname="com.shenit.springboot.easemob.EasemobClientTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: org/easymock/EasyMockSupport" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/easymock/EasyMockSupport
