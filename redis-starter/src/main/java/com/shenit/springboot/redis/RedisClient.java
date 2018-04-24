@@ -52,11 +52,10 @@ public class RedisClient {
      * 获取所有hash值
      * @param key
      * @param valueSupplier
-     * @param <K>
      * @param <V>
      * @return
      */
-    public <K,V> Map<Object, V> hgetall(String key,Function<Object,V> valueSupplier) {
+    public <V> Map<Object, V> hgetall(String key, Function<Object, V> valueSupplier) {
         return hgetall(key, null, valueSupplier);
     }
 
@@ -65,15 +64,15 @@ public class RedisClient {
      * @param key
      * @return
      */
-    public <K,V> Map<Object, V> hgetall(String key,Function<Object,K> keySupplier,Function<Object,V> valueSupplier) {
+    public <K, V> Map<K, V> hgetall(String key, Function<Object, K> keySupplier, Function<Object, V> valueSupplier) {
         Map<Object,Object> values =  redis.opsForHash().entries(schemadPath(key));
-        Map<Object,V> result = Maps.newHashMap();
+        Map<K, V> result = Maps.newHashMap();
         for(Object k : values.keySet()){
             result.put(
-                    keySupplier == null ? k : keySupplier.apply(k),
+                    keySupplier == null ? (K) k : keySupplier.apply(k),
                     valueSupplier.apply(values.get(k)));
         }
-        return (Map<Object, V>) result;
+        return result;
     }
 
 
@@ -339,6 +338,14 @@ public class RedisClient {
         return redis.opsForZSet().reverseRank(schemadPath(path), value);
     }
 
+
+    /**
+     * 获取有序集合的成员的得分
+     */
+    public Double zscore(String path, Long key) {
+        return redis.opsForZSet().score(schemadPath(path), key);
+    }
+
     public void pipeline(RedisCallback<?> callback) {
         redis.executePipelined(callback);
     }
@@ -489,7 +496,6 @@ public class RedisClient {
     }
 
 
-
     /**
      * 把路径前面带上schema前缀
      * @param key
@@ -518,7 +524,6 @@ public class RedisClient {
     public static String absolutePath(String key) {
         return ShenStrings.joinWith(ABSOLUTE_PATH, key, ShenStrings.COLON);
     }
-
 
 
     /**
@@ -653,5 +658,19 @@ public class RedisClient {
      */
     public Long zcard(String path) {
         return redis.opsForZSet().zCard(schemadPath(path));
+    }
+
+    /**
+     * key 重命名
+     */
+    public void rename(String key, String newKey) {
+        redis.rename(schemadPath(key), schemadPath(newKey));
+    }
+
+    /**
+     * 判断key是否存在
+     */
+    public boolean hasKey(String key) {
+        return redis.hasKey(schemadPath(key));
     }
 }
